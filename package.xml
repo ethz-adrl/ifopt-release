@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<package format="2">
+  <name>ifopt</name>
+  <version>2.0.1</version>
+  <description>
+    An <a href="http://eigen.tuxfamily.org">Eigen-</a>
+    based interface to Nonlinear Programming solver
+    <a href="https://projects.coin-or.org/Ipopt">Ipopt</a>. 
+    Inuitive and efficient C++ implementation of variables, costs and 
+    constraints using Eigen. Easy integration in your projects in catkin
+    or pure cmake. 
+  </description>
+  
+  <author>Alexander W. Winkler</author>
+  <maintainer email="winklera@ethz.ch">Alexander W. Winkler</maintainer>
+  <license>BSD</license>
+  
+  <url type="website">https://github.com/ethz-adrl/ifopt</url>
+  
+  <!-- although pure cmake is also sufficient -->
+  <buildtool_depend>catkin</buildtool_depend> 
+  <depend>eigen</depend>
+  <depend>coinor-libipopt-dev</depend> 
+  
+</package>

@@ -2,6 +2,14 @@
 Changelog for package ifopt
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.2 (2018-07-02)
+------------------
+* fully remove catkin dependency
+* increase cmake project version number manually
+* DRY in cmake list (reuse ${LIB_CORE})
+* Update README.md
+* Contributors: Alexander Winkler
+
 2.0.1 (2018-06-30)
 ------------------
 * make IPOPT the default ON solver option

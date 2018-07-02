@@ -4,6 +4,7 @@ find_package(IPOPT 3.11.9 REQUIRED)
 ###########
 ## Build ##
 ###########
+set(LIB_IPOPT ifopt_ipopt)
 # The IPOPT solver interface
 add_library(${LIB_IPOPT} SHARED 
     src/ipopt.cc
@@ -18,7 +19,7 @@ target_include_directories(${LIB_IPOPT}
 )
 target_link_libraries(${LIB_IPOPT}
   PUBLIC 
-    ifopt_core
+    ${LIB_CORE}
   PRIVATE
     ${IPOPT_LIBRARIES}
     ${IPOPT_LINK_FLAGS}

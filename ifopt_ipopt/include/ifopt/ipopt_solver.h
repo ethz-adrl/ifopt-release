@@ -30,47 +30,42 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <ifopt/problem.h>
 #include <ifopt/solver.h>
 
+
+namespace Ipopt {
+class IpoptApplication;
+}
+
 namespace ifopt {
 
-class Ipopt : public Solver {
+/**
+ * @brief An interface to IPOPT, fully hiding its implementation.
+ *
+ * To set specific options, see:
+ * https://www.coin-or.org/Ipopt/documentation/node40.html
+ *
+ * @ingroup Solvers
+ */
+class IpoptSolver : public Solver {
 public:
-  using Ptr = std::shared_ptr<Ipopt>;
+  using Ptr = std::shared_ptr<IpoptSolver>;
+
+  IpoptSolver();
+  virtual ~IpoptSolver() = default;
 
   /** @brief  Creates an IpoptAdapter and solves the NLP.
     * @param [in/out]  nlp  The specific problem.
-    *
-    * This function creates the actual solver, sets the solver specific
-    * options (see SetOptions()) and passes the IpoptAdapter problem to it
-    * to be modified.
     */
   void Solve(Problem& nlp) override;
 
   /** Options for the IPOPT solver. A complete list can be found here:
     * https://www.coin-or.org/Ipopt/documentation/node40.html
     */
+  void SetOption(const std::string& name, const std::string& value);
+  void SetOption(const std::string& name, int value);
+  void SetOption(const std::string& name, double value);
 
-  /** Which linear solver to use. Mumps is default because it comes with the
-   *  precompiled ubuntu binaries. However, the coin-hsl solvers can be
-   *  significantly faster and are free for academic purposes. They can be
-   *  downloaded here: http://www.hsl.rl.ac.uk/ipopt/ and must be compiled
-   *  into your IPOPT libraries. Then you can use the additional strings:
-   *  "ma27, ma57, ma77, ma86, ma97" here.
-   */
-  std::string linear_solver_ = "mumps";
-
-  /** whether to use the analytical derivatives coded in ifopt, or let
-   *  IPOPT approximate these through finite differences. This is usually
-   *  significantly slower.
-   */
-  bool use_jacobian_approximation_ = false;
-
-
-  std::string hessian_approximation_ = "limited-memory";
-  double tol_ = 0.001;
-  double max_cpu_time_ = 40.0;
-  int print_level_ = 3;
-  std::string print_user_options_ = "no";
-  std::string print_timing_statistics_ = "no";
+private:
+  std::shared_ptr<Ipopt::IpoptApplication> ipopt_app_;
 };
 
 } /* namespace ifopt */

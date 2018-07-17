@@ -32,9 +32,14 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 namespace ifopt {
 
-class Snopt : public Solver {
+/**
+ * @brief An interface to SNOPT, fully hiding its implementation.
+ *
+ * @ingroup Solvers
+ */
+class SnoptSolver : public Solver {
 public:
-  using Ptr = std::shared_ptr<Snopt>;
+  using Ptr = std::shared_ptr<SnoptSolver>;
 
   /**
    * @brief Creates a snoptProblemA from @a nlp and solves it.

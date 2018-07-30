@@ -1,3 +1,26 @@
+## ifopt (melodic) - 2.0.5-0
+
+The packages in the `ifopt` repository were released into the `melodic` distro by running `/usr/bin/bloom-release ifopt --track melodic --rosdistro melodic` on `Mon, 30 Jul 2018 12:17:01 -0000`
+
+The `ifopt` package was released.
+
+Version of package(s) in repository `ifopt`:
+
+- upstream repository: https://github.com/ethz-adrl/ifopt.git
+- release repository: https://github.com/ethz-adrl/ifopt-release.git
+- rosdistro version: `2.0.4-0`
+- old version: `2.0.4-0`
+- new version: `2.0.5-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.6`
+- catkin_pkg version: `0.4.1`
+- rosdep version: `0.12.2`
+- rosdistro version: `0.5.0`
+- vcstools version: `0.1.40`
+
+
 ## ifopt (lunar) - 2.0.5-0
 
 The packages in the `ifopt` repository were released into the `lunar` distro by running `/usr/bin/bloom-release ifopt --track lunar --rosdistro lunar` on `Mon, 30 Jul 2018 12:14:05 -0000`

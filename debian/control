@@ -1,0 +1,13 @@
+Source: ros-kinetic-ifopt
+Section: misc
+Priority: extra
+Maintainer: Alexander W. Winkler <alexander.w.winkler@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), cmake, coinor-libipopt-dev, libeigen3-dev
+Homepage: https://github.com/ethz-adrl/ifopt
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-ifopt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, coinor-libipopt-dev, libeigen3-dev, ros-kinetic-catkin
+Description: An Eigen- based interface to Nonlinear Programming solver Ipopt.
+ Inuitive and efficient C++ implementation of variables, costs and constraints using Eigen. Easy integration in your projects in catkin or pure cmake.

@@ -1,3 +1,26 @@
+## ifopt (lunar) - 2.0.7-1
+
+The packages in the `ifopt` repository were released into the `lunar` distro by running `/usr/bin/bloom-release ifopt --rosdistro lunar` on `Tue, 19 Nov 2019 16:03:42 -0000`
+
+The `ifopt` package was released.
+
+Version of package(s) in repository `ifopt`:
+
+- upstream repository: https://github.com/ethz-adrl/ifopt.git
+- release repository: https://github.com/ethz-adrl/ifopt-release.git
+- rosdistro version: `2.0.6-0`
+- old version: `2.0.6-0`
+- new version: `2.0.7-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.0`
+- catkin_pkg version: `0.4.14`
+- rosdep version: `0.17.1`
+- rosdistro version: `0.7.5`
+- vcstools version: `0.1.42`
+
+
 ## ifopt (kinetic) - 2.0.7-1
 
 The packages in the `ifopt` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release ifopt --rosdistro kinetic` on `Tue, 19 Nov 2019 15:55:25 -0000`

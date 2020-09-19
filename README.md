@@ -1,3 +1,26 @@
+## ifopt (noetic) - 2.0.7-1
+
+The packages in the `ifopt` repository were released into the `noetic` distro by running `/usr/bin/bloom-release ifopt --track noetic --rosdistro noetic --new-track` on `Sat, 19 Sep 2020 02:36:00 -0000`
+
+The `ifopt` package was released.
+
+Version of package(s) in repository `ifopt`:
+
+- upstream repository: https://github.com/ethz-adrl/ifopt.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `2.0.7-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.8`
+- catkin_pkg version: `0.4.22`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.2`
+- vcstools version: `0.1.42`
+
+
 ## ifopt (lunar) - 2.0.7-1
 
 The packages in the `ifopt` repository were released into the `lunar` distro by running `/usr/bin/bloom-release ifopt --rosdistro lunar` on `Tue, 19 Nov 2019 16:03:42 -0000`

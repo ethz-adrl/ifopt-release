@@ -1,3 +1,26 @@
+## ifopt (foxy) - 2.1.0-1
+
+The packages in the `ifopt` repository were released into the `foxy` distro by running `/usr/bin/bloom-release -r foxy ifopt --new-track` on `Tue, 09 Nov 2021 22:08:54 -0000`
+
+The `ifopt` package was released.
+
+Version of package(s) in repository `ifopt`:
+
+- upstream repository: https://github.com/ethz-adrl/ifopt.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `2.1.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## ifopt (noetic) - 2.0.7-1
 
 The packages in the `ifopt` repository were released into the `noetic` distro by running `/usr/bin/bloom-release ifopt --track noetic --rosdistro noetic --new-track` on `Sat, 19 Sep 2020 02:36:00 -0000`

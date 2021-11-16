@@ -65,7 +65,7 @@ void Component::Print (double tol, int& index) const
   VecBound bounds = GetBounds();
 
   std::vector<int> viol_idx;
-  for (uint i=0; i<bounds.size(); ++i) {
+  for (std::size_t i=0; i<bounds.size(); ++i) {
     double lower = bounds.at(i).lower_;
     double upper = bounds.at(i).upper_;
     double val = x(i);
@@ -162,10 +162,13 @@ Composite::SetVariables (const VectorXd& x)
 
 Composite::Jacobian
 Composite::GetJacobian () const
-{
-  int n_var = components_.empty() ? 0 : components_.front()->GetJacobian().cols();
-  Jacobian jacobian(GetRows(), n_var);
+{ // set number of variables only the first time this function is called,
+  // since number doesn't change during the optimization. Improves efficiency.
+  if (n_var == -1)
+    n_var = components_.empty() ? 0 : components_.front()->GetJacobian().cols();
 
+  Jacobian jacobian(GetRows(), n_var);
+  
   if (n_var == 0) return jacobian;
 
   int row = 0;

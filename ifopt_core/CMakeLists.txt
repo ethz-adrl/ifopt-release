@@ -5,7 +5,7 @@ find_package(Eigen3 REQUIRED)
 ###########
 ## Build ##
 ###########
-add_library(${LIB_CORE} SHARED
+add_library(${LIB_CORE}
     src/problem.cc
     src/composite.cc
     src/leaves.cc
@@ -33,6 +33,7 @@ install(
   EXPORT  ${LIB_CORE}-targets
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 # Copy header files to usr/local/include/ifopt/*
 install(

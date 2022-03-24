@@ -9,7 +9,7 @@ find_package(IPOPT 3.11.9 REQUIRED)
 ###########
 set(LIB_IPOPT ifopt_ipopt)
 # The IPOPT solver interface
-add_library(${LIB_IPOPT} SHARED 
+add_library(${LIB_IPOPT} 
     src/ipopt_adapter.cc
     src/ipopt_solver.cc
 )
@@ -49,12 +49,17 @@ add_test(${LIB_IPOPT}-example ${LIB_IPOPT}-example)
 #############
  # Copy library files to usr/local/lib/libifopt_ipopt.so
 install(
-  TARGETS ${LIB_IPOPT} ${LIB_IPOPT}-example
+  TARGETS ${LIB_IPOPT}
   EXPORT  ${LIB_IPOPT}-targets
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-  RUNTIME DESTINATION ${IFOPT_INSTALL_BINDIR}
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
   INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+)
+# install example executable
+install(
+  TARGETS ${LIB_IPOPT}-example
+  RUNTIME DESTINATION ${IFOPT_INSTALL_BINDIR}
 )
 # Copy header files to usr/local/include/ifopt/*
 install(DIRECTORY include/ifopt/
